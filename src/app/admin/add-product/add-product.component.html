@@ -1,0 +1,43 @@
+<h2 class="text-center">Add product</h2>
+
+<form class="login-form pt-2 mt-2" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Name" [(ngModel)]="model.name" name="name" required>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput type="text" placeholder="description" [(ngModel)]="model.description" name="description"
+                required>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input matInput type="number" placeholder="Price" [(ngModel)]="model.price" name="price" required>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="model.category" name="category">
+                <mat-option [value]="1">HOME</mat-option>
+                <mat-option [value]="2">FOOD</mat-option>
+                <mat-option [value]="3">SPORT</mat-option>
+                <mat-option [value]="4">COSMETICS</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-checkbox name="isPop" class="example-margin" [(ngModel)]="model.isPopular">Is popular</mat-checkbox>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Add</button>
+</form>

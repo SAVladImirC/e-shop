@@ -1,0 +1,38 @@
+<form class="login-form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" placeholder="Name" [(ngModel)]="model.name" name="name" required>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Surname</mat-label>
+      <input matInput type="text" placeholder="Surname" [(ngModel)]="model.surname" name="surname" required>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Email" [(ngModel)]="model.email" name="email" required>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password" [(ngModel)]="model.password" name="password" required>
+    </mat-form-field>
+  </div>
+
+  <div class=row>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Address" [(ngModel)]="model.address" name="address" required></textarea>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit">Register</button>
+</form>

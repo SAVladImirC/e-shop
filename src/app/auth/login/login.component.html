@@ -1,0 +1,21 @@
+<form class="login-form" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Email" [(ngModel)]="model.email" name="email" required>
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" [(ngModel)]="model.password" name="password"
+                required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+    </div>
+
+    <div class="mt-2 pt-2">{{message}}</div>
+
+    <div class="mt-2 pt-2">Don't have an account? Join us <a href="/auth/register">here</a></div>
+</form>

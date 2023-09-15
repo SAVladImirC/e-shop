@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <h1 (click)="goHome()" class="cursor-pointer">EShop</h1>
+        <app-menu></app-menu>
+        <span class="spacer"></span>
+        <button mat-button [matBadge]="getItemsInCart()" (click)="toggleCart()" matBadgeOverlap="true" class="me-2"><i
+                class="fa fa-shopping-cart fs-4"></i></button>
+        <ng-container *ngIf="!isLogged()">
+            <button mat-button class="ps-2" (click)="goToLogIn()">Log in</button>
+            <button mat-raised-button color="primary" (click)="goToSignUp()">Sign up</button>
+        </ng-container>
+        <ng-container *ngIf="isLogged()">
+            <p>Hi, {{getUserName()}}</p>
+        </ng-container>
+        <ng-container *ngIf="isAdmin()">
+            <button mat-raised-button color="primary" (click)="goToAdmin()">Administration</button>
+        </ng-container>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,99 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col">
+            <h1 class="text-center text-primary-theme fw-bold"><i class="fa fa-diamond text-dark"></i> Introducing Our
+                Must-Have Products! Shop Now for
+                Unbeatable
+                Deals! <i class="fa fa-diamond text-dark"></i></h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <h4 class="text-center text-warning"><i class="fa fa-home text-dark"></i> Transform your living space into a
+                cozy sanctuary.
+                Explore our home and decor section for stylish furniture, elegant decor pieces, and more. Your dream
+                home is just a click away <i class="fa fa-home text-dark"></i></h4>
+        </div>
+    </div>
+    <ng-container *ngFor="let product of homeProducts; let i = index;">
+        <ng-container *ngIf="i % 4 === 0">
+            <div class="row mt-1">
+                <div class="col-sm-3" *ngFor="let indx of [i + 0, i + 1, i + 2, i + 3]">
+                    <ng-container *ngIf="homeProducts[indx]; let nextItem">
+                        <app-card [title]="nextItem.name" [subtitle]="'$' + nextItem.price"
+                            [content]="nextItem.description" (actionClicked)="addToCart(nextItem)"></app-card>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <mat-divider class="my-2"></mat-divider>
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4 class="text-center text-warning"><i class="fa fa-utensils text-dark"></i> Unleash your inner chef with
+                our kitchen essentials.
+                From high-quality cookware to innovative appliances, we've got everything you need to create culinary
+                masterpieces <i class="fa fa-utensils text-dark"></i></h4>
+        </div>
+    </div>
+    <ng-container *ngFor="let product of foodProducts; let i = index;">
+        <ng-container *ngIf="i % 4 === 0">
+            <div class="row mt-1">
+                <div class="col-sm-3" *ngFor="let indx of [i + 0, i + 1, i + 2, i + 3]">
+                    <ng-container *ngIf="foodProducts[indx]; let nextItem">
+                        <app-card [title]="nextItem.name" [subtitle]="'$' + nextItem.price"
+                            [content]="nextItem.description" (actionClicked)="addToCart(nextItem)"></app-card>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <mat-divider class="my-2"></mat-divider>
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4 class="text-center text-warning"><i class="fa fa-dumbbell text-dark"></i> Achieve your health and
+                fitness goals with our
+                fitness equipment and wellness products. Get in shape, stay active, and feel your best every day <i
+                    class="fa fa-dumbbell text-dark"></i></h4>
+        </div>
+    </div>
+    <ng-container *ngFor="let product of sportProducts; let i = index;">
+        <ng-container *ngIf="i % 4 === 0">
+            <div class="row mt-1">
+                <div class="col-sm-3" *ngFor="let indx of [i + 0, i + 1, i + 2, i + 3]">
+                    <ng-container *ngIf="sportProducts[indx]; let nextItem">
+                        <app-card [title]="nextItem.name" [subtitle]="'$' + nextItem.price"
+                            [content]="nextItem.description" (actionClicked)="addToCart(nextItem)"></app-card>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <mat-divider class="my-2"></mat-divider>
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4 class="text-center text-warning"><i class="fa fa-spa text-dark"></i> Pamper yourself with our beauty and
+                self-care products.
+                Discover skincare gems, makeup must-haves, and fragrances that will leave you feeling confident and
+                refreshed <i class="fa fa-spa text-dark"></i></h4>
+        </div>
+    </div>
+    <ng-container *ngFor="let product of cosmeticsProducts; let i = index;">
+        <ng-container *ngIf="i % 4 === 0">
+            <div class="row mt-1 pb-3">
+                <div class="col-sm-3" *ngFor="let indx of [i + 0, i + 1, i + 2, i + 3]">
+                    <ng-container *ngIf="cosmeticsProducts[indx]; let nextItem">
+                        <app-card [title]="nextItem.name" [subtitle]="'$' + nextItem.price"
+                            [content]="nextItem.description" (actionClicked)="addToCart(nextItem)"></app-card>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button mat-button [matMenuTriggerFor]="categories">Categories</button>
+        </div>
+        <div class="col">
+            <button mat-button (click)="navigate(1)">About us</button>
+        </div>
+        <div class="col">
+            <button mat-button (click)="navigate(2)">Contact</button>
+        </div>
+    </div>
+</div>
+
+<mat-menu #categories="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Food</button>
+    <button mat-menu-item>Sport&Health</button>
+    <button mat-menu-item>Cosmetics</button>
+</mat-menu>
