@@ -33,5 +33,18 @@ export class ProductService {
     });
   }
 
+  getById(id: number): Product{
+    return this.products.find(p => p.id == id) ?? new Product("", "", 0, new Blob(), false, 0);
+  }
+
+  edit(product: Product){
+    var index = this.products.findIndex(p => p.id == product.id);
+    this.products[index] = product;
+  }
+
+  delete(id: number){
+    this.products = this.products.filter(p => p.id != id);
+  }
+
   constructor() { }
 }

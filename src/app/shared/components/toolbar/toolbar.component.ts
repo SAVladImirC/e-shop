@@ -34,7 +34,7 @@ export class ToolbarComponent implements OnInit {
   }
 
   goToAdmin() {
-    this.router.navigate(['admin/add-product']);
+    this.router.navigate(['admin/products']);
   }
 
   toggleCart() {

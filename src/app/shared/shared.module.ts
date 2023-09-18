@@ -16,7 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule
   ],
   exports: [
     CommonModule,
@@ -55,6 +57,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     MatInputModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatTableModule,
 
     ToolbarComponent,
     CardComponent
